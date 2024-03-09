@@ -1,0 +1,26 @@
+##remove the outerost paranethesis
+  input=(()())(())
+  output=()()();
+
+##solution
+ public  static String remove(String s)
+{
+  Stringbuilder res=new StringBuilder();
+  for(char c:s.tocharArray())
+  {
+    if(c=='(')
+    {
+      if(count!=0)
+      res.append('(');
+    }
+    count++;
+    else
+    {
+      if(count!=1)
+      {
+        res.append(')');
+      }
+      count--;
+  }
+    return res.toString();
+  }
