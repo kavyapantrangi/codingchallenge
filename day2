@@ -17,3 +17,26 @@ str=str.append(" ");
 return str.toString();
 }
 }
+
+##### Remove all duplicates from a given string
+for example
+input ::HaPPy
+output:HaPy
+code::
+public String duplicate(String s)
+{
+String ans="";
+HashSet<Character>h=new HashSet<>();
+for(int i=0;i<s.length();i++)
+{
+if(h.contains(s.charAt(i))continue;
+else
+{
+h.add(s.charAt(i))
+ans+=s.charAt(i);
+}
+}return ans;
+}
+
+
+
