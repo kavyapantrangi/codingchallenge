@@ -1,1 +1,17 @@
-
+##longest common prefix
+input string=["clue","club","clear"]
+output="cl"
+code:
+public static String common(String s[])
+{
+StringBuilder str=new StringBuilder();
+Arrays.sort(s);
+char []arr1=s[0].toCharArray();
+char[]arr2=s[s.length-1].toCharArray();
+for(int i=0;i<arr1.length;i++)
+{
+if(arr1[i]!=arr2[i])break;
+str.append(arr1[i]);
+}
+return str.toString();
+}
