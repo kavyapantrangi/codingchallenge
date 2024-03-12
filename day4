@@ -1,0 +1,21 @@
+### isomorphic strings"""
+s="abb"
+t="xyy"
+  public static boolean isomorphic(String s,String t)
+{
+   Map<Character,Integer>map=new HashMap<>();
+        Map<Character,Integer>map1=new HashMap<>();
+        if(str1.length()!=str2.length())return false;
+        for(int i=0;i<str1.length();i++)
+        {
+            map.put(str1.charAt(i),map.getOrDefault(str1.charAt(i), 0)+1);
+        }
+for(int i=0;i<str2.length();i++)
+        {
+            map1.put(str2.charAt(i),map1.getOrDefault(str2.charAt(i), 0)+1);
+        }
+if(map.size()==map1.size())return true;
+return false;
+      
+    }
+  
