@@ -1,0 +1,66 @@
+Isomorphic Strings:
+Isomorphic means that each character in string a is associated with the each character in another String B:
+
+  example: 'egg'
+          'yyb'
+  ouptput:yes isomorphic
+Brute Force approach:
+code solution:
+boolean isIsomorphic(string s,String t)
+{
+  if(s.length()!=t.length())
+  {
+    return false;
+  }
+  Map<Character,Character>charmappingmap=new HashMap<>();
+  for(int i=0;i<s.length();i++)
+  {
+    char original=s.charAt(i);
+    char replacement=t.charAt(i);
+    if(!charmappingmap.containsKey(original))
+    {
+      if(!charmappingmap.containsValue(replacement))
+      {
+        charmappingmap.put(original,replacement);
+      }
+      else return false;
+    }
+    char mapedchar=charmappingmap.get(original);
+    if(mappedchar!=replacemet)
+    {
+      return false;
+    }
+  }
+  return true;
+}
+}
+
+
+
+
+
+### Rotation of a string:
+input:
+a="abcde"
+b="cdeab"
+  if b can be equal to a after certain number of rotations
+
+  public  boolean rotation(String s,String goal)
+{
+  return (S.length()==goal.length()&&(s+s).contains(goal));
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
